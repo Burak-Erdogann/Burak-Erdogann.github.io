@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kart Eşleştirme Oyunu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Kart Eşleştirme Oyunu</h1>
+  <button id="start-button">Oyunu Başlat</button>
+
+
+  <div id="rules-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Oyunun Kuralları</h2>
+      <p>
+        <strong style="color: rgb(48, 41, 41);">1.</strong> Aynı kartları eşleştirmeye çalışmalısınız Yanlış eşleşmelerde can kaybedersiniz.<br><br>
+        <strong style="color: rgb(48, 41, 41);">2.</strong> Seviye ilerledikçe kart sayısı artacaktır<br><br>
+        <strong style="color: rgb(48, 41, 41);">3.</strong> Her level tamamlandığında ekstra 1 can kazanacaksınız<br><br>
+        <strong style="color: rgb(48, 41, 41);">Jokerleriniz:<br><br> -Süre jokeri</strong>: 20 saniye ek süre kazandırır.<br><br>
+        <strong style="color: rgb(48, 41, 41);">-Kart göster jokeri</strong>: Tüm kartları 5 saniye için tekrar açılır.<br><br>
+        <strong style="color: rgb(48, 41, 41);">-Otomatik eşleştirme jokeri</strong>: Rastgele bir çifti eşleştirir.<br><br>
+        <strong style="color: rgb(48, 41, 41);">4.</strong> Yeni level a geçtiğinizde jokerleriniz yenilenir<br><br>
+        <strong style="color: rgb(48, 41, 41);">5.</strong> Tüm canlar bittiğinde veya süre bittiğinde oyun sona erer ve ekranda son verileriniz yazar.
+      </p>
+      <button id="close-rules">Kuralları Kapat</button>
+    </div>
+  </div>
+  <button id="show-rules">Kuralları Göster</button>
+
+
+
+  <div class="game-info">
+    <div id="score">Puan: 0</div>
+    <div id="lives">Canlar: 3</div>
+    <div id="timer">Süre: 45 sn</div>
+    <div id="level">Level: 1</div>
+  </div>
+
+  <div class="control-panel">
+    <button id="time-joker" disabled>Süre Uzatma</button>
+    <button id="show-cards-joker" disabled>Kartları Göster</button>
+    <button id="auto-match-joker" disabled>İki Kartı Eşleştir</button>
+  </div>
+
+  <div class="card-grid"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
