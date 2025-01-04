@@ -9,7 +9,7 @@ const levelDisplay = document.getElementById('level');
 
 // Level, süre, puan ve can değişkenleri
 let level = 1;
-let timer = 45; // Her level için başlangıç süresi
+let timer = 60; // Her level için başlangıç süresi
 let score = 0; // Başlangıç puanı
 let lives = 3; // Başlangıç canı
 
@@ -259,7 +259,7 @@ function resetBoard() {
 function startLevel() {
   generateCards(); // Kartları oluştur
   createCards(); // Kartları ekrana yerleştir
-  timer = 45; // Süreyi sıfırla
+  timer = 60; // Süreyi sıfırla
   timerDisplay.textContent = `Süre: ${timer} sn`;
   startTimer(); // Zamanlayıcıyı başlat
 
@@ -299,7 +299,7 @@ function startGame() {
   level = 1;
   score = 0;
   lives = 3;
-  timer = 45;
+  timer = 60;
   firstCard = null;
   secondCard = null;
   lockBoard = false;
