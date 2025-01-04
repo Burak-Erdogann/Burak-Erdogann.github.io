@@ -35,7 +35,7 @@ function shuffle(array) {
 //------------------------------------------------------------ KART İŞLEMLERİ
 // Kartları oluşturma
 function generateCards() {
-  const numOfPairs = 4 + (level - 1) * 4; // Başlangıçta 8 kart, her levelda 4 kart eklenir
+  const numOfPairs = 4 + (level - 1) * 4; // Başlangıçta 4 kart, her levelda 4 kart eklenir
   const selectedLetters = alphabet.slice(0, numOfPairs / 2); // İlk 'n' harfi seç (çift sayısı)
   cards = selectedLetters.flatMap(letter => [letter, letter]); // Çiftleri oluştur
   shuffle(cards); // Kartları karıştır
