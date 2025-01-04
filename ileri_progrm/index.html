@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kart Eşleştirme Oyunu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Kart Eşleştirme Oyunu</h1>
+  <button id="start-button">Oyunu Başlat</button>
+
+  <div id="rules-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Oyunun Kuralları</h2>
+      <p>
+        <strong style="color: rgb(48, 41, 41);">1.</strong>Oyunda Aynı Kartları Eşleştirmeye Çalışmalısınız Yanlış Eşleşmelerde Can Kaybedersiniz.<br><br>
+        <strong style="color: rgb(48, 41, 41);">2.</strong> Seviye İlerledikçe Kart Sayısı Artacaktır<br><br>
+        <strong style="color: rgb(48, 41, 41);">3.</strong> Her Level Tamamlandığında Ekstra 1 Can Kazanacaksınız<br><br>
+        <strong style="color: rgb(48, 41, 41);">Jokerleriniz:<br><br> -Süre jokeri:</strong> 20 saniye ek süre kazandırır.<br><br>
+        <strong style="color: rgb(48, 41, 41);">-Kart Göster Jokeri:</strong>Tüm Kartları 5 Saniye İçin Tekrar Açılır.<br><br>
+        <strong style="color: rgb(48, 41, 41);">-Otomatik Eşleştirme Jokeri:</strong> Rastgele Bir Çifti Eşleştirir.<br><br>
+        <strong style="color: rgb(48, 41, 41);">5.</strong> Tüm Jokerler Bir Level da Sadece 1 Kez Kullanılabilir Yeni Level a Geçtiğinizde Haklarınız Yenilenir<br><br>
+        <strong style="color: rgb(48, 41, 41);">6.</strong> Tüm canlar bittiğinde veya süre bittiğinde oyun sona erer ve ekranda son verileriniz yazar.
+      </p>
+      <button id="close-rules">Kuralları Kapat</button>
+    </div>
+  </div>
+  <button id="show-rules">Kuralları Göster</button>
+
+  <div class="game-info">
+    <div id="score">Puan: 0</div>
+    <div id="lives">Canlar: 3</div>
+    <div id="timer">Süre: 60 sn</div>
+    <div id="level">Level: 1</div>
+  </div>
+
+  <div class="control-panel">
+    <button id="time-joker" disabled>Süre Uzatma</button>
+    <button id="show-cards-joker" disabled>Kartları Göster</button>
+    <button id="auto-match-joker" disabled>İki Kartı Eşleştir</button>
+  </div>
+
+  <div class="card-grid"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
